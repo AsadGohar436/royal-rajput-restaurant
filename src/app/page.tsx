@@ -258,6 +258,173 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 3.5. Official Social Media Highlights & Viral Kitchen Reels */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs font-bold uppercase tracking-wider mb-2">
+              <Sparkles className="w-3.5 h-3.5" />
+              Live On Instagram, TikTok &amp; Facebook
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+              Latest From Our Imperial Kitchen &amp; Social Feeds
+            </h2>
+            <p className="mt-2 text-slate-400 text-sm sm:text-base max-w-xl">
+              Catch our daily behind-the-scenes sizzle, grand opening highlights, and limited-time deals across our official social channels.
+            </p>
+          </div>
+          <Link
+            href="/social"
+            className="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-amber-300 transition-colors"
+          >
+            <span>Visit All-in-One Social Hub</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          {/* Item 1: Grand Opening */}
+          <div className="bg-slate-900 border border-amber-500/30 rounded-2xl overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-xl group">
+            <div className="relative aspect-square overflow-hidden bg-slate-950">
+              <img
+                src="/images/post1_grand_opening.jpg"
+                alt="Royal Rajput Grand Opening Post"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5 bg-amber-500/90 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow">
+                Day 1 • 12:30 PM
+              </div>
+              <div className="absolute bottom-2.5 right-2.5 bg-slate-950/80 backdrop-blur-md text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">
+                Opening Post
+              </div>
+            </div>
+            <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <h3 className="font-serif text-sm font-bold text-white group-hover:text-amber-400 transition-colors">
+                  Grand Opening &amp; Royal Menu Reveal
+                </h3>
+                <p className="text-xs text-slate-400 mt-1 line-clamp-2">
+                  Slow-steamed saffron biryani and iron-wok karahi arrive across Pakistan.
+                </p>
+              </div>
+              <a
+                href="https://instagram.com/royalrajput.pk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2 px-3 rounded-xl bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 border border-pink-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <span>Follow on Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Item 2: Karahi Cooking Reel */}
+          <div className="bg-slate-900 border border-pink-500/40 rounded-2xl overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-xl group">
+            <div className="relative aspect-square overflow-hidden bg-slate-950">
+              <img
+                src="/images/reel1_cooking_karahi.jpg"
+                alt="Pure Desi Ghee Karahi Reel"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5 bg-rose-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
+                Day 1 • 8:00 PM
+              </div>
+              <div className="absolute bottom-2.5 right-2.5 bg-slate-950/80 backdrop-blur-md text-pink-300 text-[10px] font-bold px-2 py-0.5 rounded border border-pink-500/30">
+                Viral Kitchen Reel 🎥
+              </div>
+            </div>
+            <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <h3 className="font-serif text-sm font-bold text-white group-hover:text-pink-400 transition-colors">
+                  Pure Desi Ghee Karahi Over Roaring Coals
+                </h3>
+                <p className="text-xs text-slate-400 mt-1 line-clamp-2">
+                  Behind the scenes cooking sizzle tossed in heavy iron woks by royal ustads.
+                </p>
+              </div>
+              <a
+                href="https://tiktok.com/@royalrajput.pk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <span>Watch on TikTok</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Item 3: Today's Deal */}
+          <div className="bg-slate-900 border border-blue-500/30 rounded-2xl overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-xl group">
+            <div className="relative aspect-square overflow-hidden bg-slate-950">
+              <img
+                src="/images/post2_todays_deal.jpg"
+                alt="Royal Rajput Today Deal"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5 bg-blue-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
+                Day 2 • 1:00 PM
+              </div>
+              <div className="absolute bottom-2.5 right-2.5 bg-slate-950/80 backdrop-blur-md text-blue-300 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-500/30">
+                20% OFF Deal ⚡
+              </div>
+            </div>
+            <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <h3 className="font-serif text-sm font-bold text-white group-hover:text-blue-400 transition-colors">
+                  Royal Lunch Feast — Today&apos;s Deal
+                </h3>
+                <p className="text-xs text-slate-400 mt-1 line-clamp-2">
+                  Special biryani, seekh kababs &amp; hot roghani naan lunch platter deal.
+                </p>
+              </div>
+              <Link
+                href="/order"
+                className="w-full py-2 px-3 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <span>Order Deal Now</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Item 4: Customer Favourite */}
+          <div className="bg-slate-900 border border-emerald-500/30 rounded-2xl overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-xl group">
+            <div className="relative aspect-square overflow-hidden bg-slate-950">
+              <img
+                src="/images/post3_customer_favourite.jpg"
+                alt="Royal Rajput Customer Favourite"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-2.5 left-2.5 bg-emerald-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full shadow">
+                Day 3 • 7:30 PM
+              </div>
+              <div className="absolute bottom-2.5 right-2.5 bg-slate-950/80 backdrop-blur-md text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/30">
+                Rated 4.9 ★
+              </div>
+            </div>
+            <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <h3 className="font-serif text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">
+                  Crowned by You: The #1 Favourite
+                </h3>
+                <p className="text-xs text-slate-400 mt-1 line-clamp-2">
+                  Peshawari Shinwari lamb chops and mutton dum biryani rated #1 in dining.
+                </p>
+              </div>
+              <a
+                href="https://facebook.com/royalrajput.pk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2 px-3 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <span>View on Facebook</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* 4. Testimonials from Food Connoisseurs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
