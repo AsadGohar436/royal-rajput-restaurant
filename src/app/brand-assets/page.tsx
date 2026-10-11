@@ -361,15 +361,20 @@ Management: asadgohar21@gmail.com`,
                 💡 <strong>Why:</strong> Dinner time, most people are online
               </div>
 
-              {/* Reel Preview */}
-              <div className="relative aspect-[9/10] rounded-xl overflow-hidden border border-pink-500/20 group">
-                <img
-                  src="/images/reel1_cooking_karahi.jpg"
-                  alt="Desi Ghee Karahi Cooking Reel"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              {/* Reel Video Player */}
+              <div className="relative aspect-[9/12] rounded-xl overflow-hidden border border-pink-500/30 bg-black group">
+                <video
+                  src="/videos/reel1_live_cooking.mp4"
+                  poster="/images/reel1_cooking_karahi.jpg"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute top-2 right-2 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-pink-300 font-bold border border-pink-500/30">
-                  9:16 Vertical Reel
+                <div className="absolute top-2 right-2 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-pink-300 font-bold border border-pink-500/30 pointer-events-none">
+                  ▶ Video Reel (MP4)
                 </div>
               </div>
 
@@ -379,7 +384,7 @@ Management: asadgohar21@gmail.com`,
                   <button
                     onClick={() =>
                       copyToClipboard(
-                        `🔥 PURE DESI GHEE. ROARING FLAMES. ROYAL TRADITION. 🔥\n\nWatch how our master ustads craft the legendary Shahi Rajput Mutton Karahi in heavy black iron woks — cooked exclusively in 100% organic desi ghee, ripe mountain tomatoes, cracked black pepper, and julienned ginger. 🥩🍲\n\nListen to that sizzle! 🔊🤤 Tag a friend who can never say no to Desi Ghee Karahi!\n\n🛵 Order fresh now with live order tracking: https://heckathon-iota.vercel.app\n📍 Beverly Centre, Islamabad | MM Alam Road, Lahore\n\n🎵 Recommended Audio: Trending Pakistani Food Sizzle / Traditional instrumental\n\n#RoyalRajput #DesiGheeKarahi #CookingReel #StreetFoodPK #BehindTheScenes #FoodPorn #PakistaniCuisine #LahoriFood #BBQReels #ViralFood`,
+                        `🔥 PURE DESI GHEE. ROARING FLAMES. ROYAL TRADITION. 🔥\n\nWatch how our master ustads craft the legendary Shahi Rajput Mutton Karahi & Roghani Tandoori Naan — cooked fresh over live roaring coals with 100% organic desi ghee, ripe mountain tomatoes, cracked black pepper, and julienned ginger. 🥩🍲\n\nListen to that sizzle! 🔊🤤 Tag a friend who can never say no to live desi food!\n\n🛵 Order fresh now with live order tracking: https://heckathon-iota.vercel.app\n📍 Beverly Centre, Islamabad | MM Alam Road, Lahore\n\n🎵 Recommended Audio: Trending Pakistani Food Sizzle / Traditional instrumental\n\n#RoyalRajput #DesiGheeKarahi #CookingReel #StreetFoodPK #BehindTheScenes #FoodPorn #PakistaniCuisine #LahoriFood #BBQReels #ViralFood`,
                         'reel1'
                       )
                     }
@@ -395,14 +400,22 @@ Management: asadgohar21@gmail.com`,
               </div>
             </div>
 
-            <div className="pt-3 border-t border-slate-800 flex items-center justify-between gap-2">
+            <div className="pt-3 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2">
               <a
-                href="/images/reel1_cooking_karahi.jpg"
-                download="Royal_Rajput_Reel1_Cooking.jpg"
-                className="w-full py-2 px-3 rounded-xl bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 border border-pink-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+                href="/videos/reel1_live_cooking.mp4"
+                download="Royal_Rajput_Reel1_Live_Cooking.mp4"
+                className="w-full py-2 px-3 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/40 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Download Reel Cover (9:16)</span>
+                <span>Download Reel Video (.MP4)</span>
+              </a>
+              <a
+                href="/images/reel1_cooking_karahi.jpg"
+                download="Royal_Rajput_Reel1_Cover.jpg"
+                className="w-full py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs font-semibold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Reel Cover Photo</span>
               </a>
             </div>
           </div>

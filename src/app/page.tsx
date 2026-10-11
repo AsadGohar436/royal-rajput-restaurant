@@ -322,9 +322,13 @@ export default function Home() {
           {/* Item 2: Karahi Cooking Reel */}
           <div className="bg-slate-900 border border-pink-500/40 rounded-2xl overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-xl group">
             <div className="relative aspect-square overflow-hidden bg-slate-950">
-              <img
-                src="/images/reel1_cooking_karahi.jpg"
-                alt="Pure Desi Ghee Karahi Reel"
+              <video
+                src="/videos/reel1_live_cooking.mp4"
+                poster="/images/reel1_cooking_karahi.jpg"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-2.5 left-2.5 bg-rose-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
