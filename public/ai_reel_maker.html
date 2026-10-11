@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Royal Rajput AI Reel Generator</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    #preview-container {
+      position: relative;
+      width: 360px;
+      height: 640px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(245, 158, 11, 0.25);
+      border: 3px solid rgba(245, 158, 11, 0.4);
+    }
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #020617;
+      transition: all 0.2s;
+    }
+    button:hover {
+      filter: brightness(1.1);
+      transform: scale(1.02);
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #f59e0b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎬 Royal Rajput — AI Cinematic Reel Video Maker</h2>
+  <div id="preview-container">
+    <canvas id="reelCanvas" width="1080" height="1920"></canvas>
+  </div>
+
+  <div class="controls">
+    <button id="btnRecord">🎥 Export &amp; Download AI Video Reel (.webm)</button>
+  </div>
+  <div id="status">Ready to render...</div>
+
+  <script>
+    const canvas = document.getElementById('reelCanvas');
+    const ctx = canvas.getContext('2d');
+    const status = document.getElementById('status');
+    const btnRecord = document.getElementById('btnRecord');
+
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = '/images/reel1_cooking_karahi.jpg';
+
+    // Particle system for embers & sparks
+    const particles = [];
+    for (let i = 0; i < 70; i++) {
+      particles.push({
+        x: Math.random() * 1080,
+        y: 1920 - Math.random() * 800,
+        size: Math.random() * 5 + 2,
+        speedY: Math.random() * 4 + 2,
+        speedX: (Math.random() - 0.5) * 2,
+        opacity: Math.random(),
+        color: Math.random() > 0.4 ? '#f59e0b' : '#ef4444'
+      });
+    }
+
+    let startTime = null;
+    let animFrame = null;
+
+    function render(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsed = (timestamp - startTime) / 1000;
+
+      ctx.clearRect(0, 0, 1080, 1920);
+
+      // 1. Ken Burns slow cinematic zoom
+      const zoom = 1.0 + (elapsed % 8) * 0.025;
+      const w = 1080 * zoom;
+      const h = 1920 * zoom;
+      const offsetX = (1080 - w) / 2;
+      const offsetY = (1920 - h) / 2 + Math.sin(elapsed * 1.5) * 15;
+
+      if (img.complete && img.naturalWidth > 0) {
+        ctx.drawImage(img, offsetX, offsetY, w, h);
+      } else {
+        ctx.fillStyle = '#0f172a';
+        ctx.fillRect(0, 0, 1080, 1920);
+      }
+
+      // 2. Dark vignette & golden ambient glow
+      const vignette = ctx.createRadialGradient(540, 960, 400, 540, 960, 1100);
+      vignette.addColorStop(0, 'rgba(0,0,0,0)');
+      vignette.addColorStop(1, 'rgba(2, 6, 23, 0.7)');
+      ctx.fillStyle = vignette;
+      ctx.fillRect(0, 0, 1080, 1920);
+
+      // Bottom fiery glow
+      const fireGlow = ctx.createLinearGradient(0, 1920, 0, 1200);
+      fireGlow.addColorStop(0, 'rgba(239, 68, 68, 0.4)');
+      fireGlow.addColorStop(0.5, 'rgba(245, 158, 11, 0.2)');
+      fireGlow.addColorStop(1, 'transparent');
+      ctx.fillStyle = fireGlow;
+      ctx.fillRect(0, 1200, 1080, 720);
+
+      // 3. Render animated rising embers & sparks
+      particles.forEach(p => {
+        p.y -= p.speedY;
+        p.x += p.speedX;
+        p.opacity -= 0.005;
+        if (p.y < 400 || p.opacity <= 0) {
+          p.y = 1920 - Math.random() * 500;
+          p.x = 200 + Math.random() * 680;
+          p.opacity = Math.random() * 0.9 + 0.1;
+        }
+
+        ctx.save();
+        ctx.globalAlpha = p.opacity;
+        ctx.fillStyle = p.color;
+        ctx.shadowColor = '#fbbf24';
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      });
+
+      // 4. Cinematic Overlay Typography
+      ctx.save();
+      // Top Royal Crown Badge
+      ctx.fillStyle = 'rgba(2, 6, 23, 0.75)';
+      ctx.roundRect(140, 140, 800, 130, 25);
+      ctx.fill();
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = '#f59e0b';
+      ctx.stroke();
+
+      ctx.fillStyle = '#f59e0b';
+      ctx.font = '900 48px serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('👑 ROYAL RAJPUT', 540, 205);
+      ctx.fillStyle = '#cbd5e1';
+      ctx.font = '700 24px sans-serif';
+      ctx.fillText('IMPERIAL FINE DINING & LIVE BBQ', 540, 245);
+
+      // Bottom Lower-Third Hook Banner
+      const pulse = 1 + Math.sin(elapsed * 4) * 0.03;
+      ctx.translate(540, 1680);
+      ctx.scale(pulse, pulse);
+      ctx.translate(-540, -1680);
+
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+      ctx.roundRect(90, 1600, 900, 180, 30);
+      ctx.fill();
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = '#fbbf24';
+      ctx.stroke();
+
+      ctx.fillStyle = '#fbbf24';
+      ctx.font = '900 52px sans-serif';
+      ctx.fillText('PURE DESI GHEE KARAHI 🔥', 540, 1675);
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = '700 32px sans-serif';
+      ctx.fillText('Order Live: royalrajput.pk', 540, 1735);
+      ctx.restore();
+
+      animFrame = requestAnimationFrame(render);
+    }
+
+    img.onload = () => {
+      requestAnimationFrame(render);
+      setTimeout(() => {
+        btnRecord.click();
+      }, 1500);
+    };
+    if (img.complete) {
+      requestAnimationFrame(render);
+      setTimeout(() => {
+        btnRecord.click();
+      }, 1500);
+    }
+
+    // Realistic Audio Sizzle Generator using Web Audio API
+    function createSizzleAudio(audioCtx) {
+      const bufferSize = audioCtx.sampleRate * 2;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = Math.random() * 2 - 1; // white noise
+      }
+
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      noise.loop = true;
+
+      // Bandpass filter for frying oil frequencies
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.value = 3200;
+      filter.Q.value = 1.8;
+
+      const gain = audioCtx.createGain();
+      gain.gain.value = 0.35;
+
+      noise.connect(filter);
+      filter.connect(gain);
+      return { source: noise, gain: gain };
+    }
+
+    // MediaRecorder Video Export
+    btnRecord.onclick = async () => {
+      status.innerText = '🔴 Recording 8-second AI Reel with sizzle audio...';
+      btnRecord.disabled = true;
+
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const sizzle = createSizzleAudio(audioCtx);
+      const dest = audioCtx.createMediaStreamDestination();
+      sizzle.gain.connect(dest);
+      sizzle.source.start();
+
+      const canvasStream = canvas.captureStream(30);
+      const combinedTracks = [
+        ...canvasStream.getVideoTracks(),
+        ...dest.stream.getAudioTracks()
+      ];
+      const combinedStream = new MediaStream(combinedTracks);
+
+      const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
+        ? 'video/webm;codecs=vp9'
+        : 'video/webm';
+
+      const recorder = new MediaRecorder(combinedStream, {
+        mimeType: mimeType,
+        videoBitsPerSecond: 6000000
+      });
+
+      const chunks = [];
+      recorder.ondataavailable = e => {
+        if (e.data.size > 0) chunks.push(e.data);
+      };
+
+      recorder.onstop = () => {
+        const blob = new Blob(chunks, { type: mimeType });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Royal_Rajput_AI_Cinematic_Reel.webm';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        sizzle.source.stop();
+        status.innerText = '✅ AI Video Reel exported and downloaded successfully!';
+        btnRecord.disabled = false;
+      };
+
+      recorder.start();
+      setTimeout(() => {
+        recorder.stop();
+      }, 8000);
+    };
+  </script>
+</body>
+</html>
