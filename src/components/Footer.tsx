@@ -90,7 +90,12 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/brand-assets" className="text-amber-400 font-semibold hover:text-amber-300 transition-colors">
+                <Link href="/social" className="text-amber-400 font-bold hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <span>🔗 Social Bio Hub (All Links)</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/brand-assets" className="text-amber-400/90 font-semibold hover:text-amber-300 transition-colors">
                   Social Brand Kit &amp; DPs
                 </Link>
               </li>

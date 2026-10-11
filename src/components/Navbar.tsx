@@ -63,12 +63,19 @@ export const Navbar: React.FC = () => {
             >
               <span>📸 Instagram</span>
             </a>
+            <span className="text-slate-600">•</span>
+            <Link
+              href="/social"
+              className="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 transition-colors whitespace-nowrap"
+            >
+              <span>🔗 Social Hub</span>
+            </Link>
             <span className="hidden md:inline text-slate-600">•</span>
             <Link
               href="/brand-assets"
               className="hidden md:flex items-center gap-1 font-bold text-amber-300 hover:text-amber-200 transition-colors whitespace-nowrap"
             >
-              <span>🎨 Social Kit &amp; DPs</span>
+              <span>🎨 DPs &amp; Banners</span>
             </Link>
             <span className="hidden lg:inline text-slate-600">•</span>
             <a
