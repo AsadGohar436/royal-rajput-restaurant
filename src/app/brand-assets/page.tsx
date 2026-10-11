@@ -259,6 +259,275 @@ Management: asadgohar21@gmail.com`,
         </div>
       </div>
 
+      {/* 4-Day Launch Campaign: 3 Posts + 1 Reel (Exact Screenshot Details) */}
+      <div className="bg-slate-900 border border-amber-500/40 rounded-3xl p-6 sm:p-10 space-y-8 shadow-2xl">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-slate-800">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-2">
+              <Sparkles className="w-3.5 h-3.5" />
+              Scheduled Social Campaign
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+              Ready-to-Post Campaign (3 Posts + 1 Video/Reel)
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
+              Aapke screenshot ke mutabiq exact time, reason, graphics aur copyable captions tayar hain. Inhe Meta Business Suite se schedule karein ya direct post karein.
+            </p>
+          </div>
+          <a
+            href="https://business.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider hover:brightness-110 shadow-lg shadow-blue-600/20 transition-all shrink-0"
+          >
+            <Facebook className="w-4 h-4" />
+            <span>Open Meta Business Suite</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
+
+        {/* Campaign Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* Item 1: Day 1 - 12:30 PM (Menu / Opening Post) */}
+          <div className="bg-slate-950 border border-amber-500/30 rounded-2xl p-5 space-y-4 flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black uppercase tracking-wider bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full border border-amber-500/30">
+                  Day 1 • ⏰ 12:30 PM
+                </span>
+                <span className="text-[11px] text-slate-400">Post: Menu / Opening</span>
+              </div>
+              <div className="text-[11px] text-amber-400/90 font-medium bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                💡 <strong>Why:</strong> People look for food before lunch
+              </div>
+
+              {/* Image Preview */}
+              <div className="relative aspect-square rounded-xl overflow-hidden border border-amber-500/20 group">
+                <img
+                  src="/images/post1_grand_opening.jpg"
+                  alt="Royal Rajput Grand Opening Post"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-amber-300 font-bold border border-amber-500/30">
+                  1080×1080 Square
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-200">Instagram &amp; Facebook Caption:</span>
+                  <button
+                    onClick={() =>
+                      copyToClipboard(
+                        `👑 BISMILLAH-IR-RAHMAN-IR-RAHEEM 👑\nThe Wait Is Officially Over! Welcome to Royal Rajput — Pakistan's Imperial Fine Dining & Charcoal BBQ Sanctuary. 🇵🇰✨\n\nFrom fragrant copper handis of Mutton Dum Biryani slow-steamed with wild saffron, to iron-wok Desi Ghee Mutton Karahi and juicy Shinwari Lamb Chops charred over live coals — imperial Rajput gastronomy is finally here! 🍖🔥\n\n📍 Beverly Centre, Islamabad | MM Alam Road, Lahore | DHA Phase 5, Karachi\n⏰ Serving Daily: 12:30 PM – 1:30 AM (Midnight BBQ)\n🛵 Order Online & Live Tracking: https://heckathon-iota.vercel.app\n\nDM us for VIP reservations or tap the link in bio to order hot to your doorstep! 👑\n\n#RoyalRajput #GrandOpening #PakistaniFood #DesiFood #BiryaniLovers #Karahi #CharcoalBBQ #IslamabadFoodies #LahoreFood #KarachiFood`,
+                        'post1'
+                      )
+                    }
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-400 hover:text-amber-300"
+                  >
+                    {copiedKey === 'post1' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                    <span>{copiedKey === 'post1' ? 'Copied!' : 'Copy Caption'}</span>
+                  </button>
+                </div>
+                <div className="text-[11px] text-slate-400 bg-slate-900 p-3 rounded-xl border border-slate-800 line-clamp-3">
+                  👑 BISMILLAH-IR-RAHMAN-IR-RAHEEM 👑 The Wait Is Officially Over! Welcome to Royal Rajput — Pakistan&apos;s Imperial Fine Dining &amp; Charcoal BBQ Sanctuary...
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-slate-800 flex items-center justify-between gap-2">
+              <a
+                href="/images/post1_grand_opening.jpg"
+                download="Royal_Rajput_Post1_Opening.jpg"
+                className="w-full py-2 px-3 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download Creative (HD)</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Item 2: Day 1 - 8:00 PM (Reel: A Dish Being Made) */}
+          <div className="bg-slate-950 border border-pink-500/30 rounded-2xl p-5 space-y-4 flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black uppercase tracking-wider bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full border border-pink-500/30">
+                  Day 1 • ⏰ 8:00 PM
+                </span>
+                <span className="text-[11px] text-pink-300 font-bold">Reel: A Dish Being Made 🎥</span>
+              </div>
+              <div className="text-[11px] text-pink-300/90 font-medium bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                💡 <strong>Why:</strong> Dinner time, most people are online
+              </div>
+
+              {/* Reel Preview */}
+              <div className="relative aspect-[9/10] rounded-xl overflow-hidden border border-pink-500/20 group">
+                <img
+                  src="/images/reel1_cooking_karahi.jpg"
+                  alt="Desi Ghee Karahi Cooking Reel"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-pink-300 font-bold border border-pink-500/30">
+                  9:16 Vertical Reel
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-200">Reel Caption &amp; Audio Tip:</span>
+                  <button
+                    onClick={() =>
+                      copyToClipboard(
+                        `🔥 PURE DESI GHEE. ROARING FLAMES. ROYAL TRADITION. 🔥\n\nWatch how our master ustads craft the legendary Shahi Rajput Mutton Karahi in heavy black iron woks — cooked exclusively in 100% organic desi ghee, ripe mountain tomatoes, cracked black pepper, and julienned ginger. 🥩🍲\n\nListen to that sizzle! 🔊🤤 Tag a friend who can never say no to Desi Ghee Karahi!\n\n🛵 Order fresh now with live order tracking: https://heckathon-iota.vercel.app\n📍 Beverly Centre, Islamabad | MM Alam Road, Lahore\n\n🎵 Recommended Audio: Trending Pakistani Food Sizzle / Traditional instrumental\n\n#RoyalRajput #DesiGheeKarahi #CookingReel #StreetFoodPK #BehindTheScenes #FoodPorn #PakistaniCuisine #LahoriFood #BBQReels #ViralFood`,
+                        'reel1'
+                      )
+                    }
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-pink-400 hover:text-pink-300"
+                  >
+                    {copiedKey === 'reel1' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                    <span>{copiedKey === 'reel1' ? 'Copied!' : 'Copy Caption'}</span>
+                  </button>
+                </div>
+                <div className="text-[11px] text-slate-400 bg-slate-900 p-3 rounded-xl border border-slate-800 line-clamp-3">
+                  🔥 PURE DESI GHEE. ROARING FLAMES. ROYAL TRADITION. Watch how our master ustads craft the legendary Shahi Rajput Mutton Karahi...
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-slate-800 flex items-center justify-between gap-2">
+              <a
+                href="/images/reel1_cooking_karahi.jpg"
+                download="Royal_Rajput_Reel1_Cooking.jpg"
+                className="w-full py-2 px-3 rounded-xl bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 border border-pink-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download Reel Cover (9:16)</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Item 3: Day 2 - 1:00 PM (Post: Today's Deal) */}
+          <div className="bg-slate-950 border border-blue-500/30 rounded-2xl p-5 space-y-4 flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black uppercase tracking-wider bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30">
+                  Day 2 • ⏰ 1:00 PM
+                </span>
+                <span className="text-[11px] text-slate-400">Post: Today&apos;s Deal</span>
+              </div>
+              <div className="text-[11px] text-blue-300/90 font-medium bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                💡 <strong>Why:</strong> Lunch break
+              </div>
+
+              {/* Image Preview */}
+              <div className="relative aspect-square rounded-xl overflow-hidden border border-blue-500/20 group">
+                <img
+                  src="/images/post2_todays_deal.jpg"
+                  alt="Royal Rajput Today Deal"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-blue-300 font-bold border border-blue-500/30">
+                  Lunch Promo
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-200">Instagram &amp; Facebook Caption:</span>
+                  <button
+                    onClick={() =>
+                      copyToClipboard(
+                        `⚡ ROYAL LUNCH FEAST — TODAY’S EXCLUSIVE DEAL! ⚡\n\nLunch break just got an imperial upgrade! Take a break from work and treat yourself to our signature lunch platter:\n\n✨ Special Deal Includes:\n🍗 Royal Mutton Dum Biryani (Aged Basmati & Tender Mutton)\n🔥 2x Charcoal Seekh Kababs\n🫓 Hot Tandoori Garlic Roghani Naan\n🥗 Fresh Zeera Raita & Mint Chutney\n🥤 Chilled Beverage\n\n💰 Flat 20% OFF on all lunch orders placed before 4:00 PM!\n🛵 Fast, piping hot delivery with live GPS tracking on our website:\n👉 https://heckathon-iota.vercel.app/order\n\nOrder right now & conquer your afternoon cravings! 👑\n\n#RoyalRajput #LunchDeal #FoodDealsPK #BiryaniDeal #IslamabadEats #LahoreFoodies #OfficeLunch #DesiFeast`,
+                        'post2'
+                      )
+                    }
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-400 hover:text-blue-300"
+                  >
+                    {copiedKey === 'post2' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                    <span>{copiedKey === 'post2' ? 'Copied!' : 'Copy Caption'}</span>
+                  </button>
+                </div>
+                <div className="text-[11px] text-slate-400 bg-slate-900 p-3 rounded-xl border border-slate-800 line-clamp-3">
+                  ⚡ ROYAL LUNCH FEAST — TODAY’S EXCLUSIVE DEAL! ⚡ Lunch break just got an imperial upgrade! Take a break from work...
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-slate-800 flex items-center justify-between gap-2">
+              <a
+                href="/images/post2_todays_deal.jpg"
+                download="Royal_Rajput_Post2_Deal.jpg"
+                className="w-full py-2 px-3 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download Creative (HD)</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Item 4: Day 3 - 7:30 PM (Post: Customer Favourite) */}
+          <div className="bg-slate-950 border border-emerald-500/30 rounded-2xl p-5 space-y-4 flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black uppercase tracking-wider bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full border border-emerald-500/30">
+                  Day 3 • ⏰ 7:30 PM
+                </span>
+                <span className="text-[11px] text-slate-400">Post: Customer Favourite</span>
+              </div>
+              <div className="text-[11px] text-emerald-300/90 font-medium bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                💡 <strong>Why:</strong> Evening, time to order
+              </div>
+
+              {/* Image Preview */}
+              <div className="relative aspect-square rounded-xl overflow-hidden border border-emerald-500/20 group">
+                <img
+                  src="/images/post3_customer_favourite.jpg"
+                  alt="Royal Rajput Customer Favourite"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-emerald-300 font-bold border border-emerald-500/30">
+                  Rated 4.9 ★
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-200">Instagram &amp; Facebook Caption:</span>
+                  <button
+                    onClick={() =>
+                      copyToClipboard(
+                        `🌟 CROWNED BY YOU: THE #1 CUSTOMER FAVOURITE! 🌟\n\nRated 4.9/5 by over 5,000+ patrons across Pakistan:\n✨ Royal Rajput Special Mutton Dum Biryani & Desi Ghee Shinwari Lamb Chops! ✨\n\n"The mutton simply melts off the bone, and the aroma of real saffron and pure desi ghee took us back to royal Mughal dastarkhwans." — Review by food lovers.\n\nDinner plans tonight? Don't settle for ordinary food when you can dine like royalty. 👑\n\n🛵 Order online with real-time live order tracking:\n👉 https://heckathon-iota.vercel.app\n📍 Beverly Centre, Blue Area, Islamabad | MM Alam, Lahore\n\n#RoyalRajput #CustomerFavourite #BestBiryani #ShinwariLamb #PakistaniFoodBloggers #DinnerTime #KarachiFoodies #IslamabadRestaurants`,
+                        'post3'
+                      )
+                    }
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-400 hover:text-emerald-300"
+                  >
+                    {copiedKey === 'post3' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                    <span>{copiedKey === 'post3' ? 'Copied!' : 'Copy Caption'}</span>
+                  </button>
+                </div>
+                <div className="text-[11px] text-slate-400 bg-slate-900 p-3 rounded-xl border border-slate-800 line-clamp-3">
+                  🌟 CROWNED BY YOU: THE #1 CUSTOMER FAVOURITE! Rated 4.9/5 by over 5,000+ patrons across Pakistan: Royal Rajput Special Mutton Dum Biryani...
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-slate-800 flex items-center justify-between gap-2">
+              <a
+                href="/images/post3_customer_favourite.jpg"
+                download="Royal_Rajput_Post3_Favourite.jpg"
+                className="w-full py-2 px-3 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download Creative (HD)</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       {/* Direct Channel Cards */}
       <div className="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 text-center space-y-6">
         <h3 className="text-xl sm:text-2xl font-bold text-white">
